@@ -3,7 +3,7 @@ use_frameworks!
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '10.0'
 
-target 'Share Moments' do
+target 'REST API Usage' do
 pod 'Alamofire', '~> 4.4'
 pod 'AlamofireObjectMapper', '~> 4.0'
 end
