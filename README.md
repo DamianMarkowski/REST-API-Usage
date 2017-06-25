@@ -20,6 +20,10 @@ pod install
 
 Once installation process finished just double click REST API Usage.xcworkspace file.
 
+## TO DO
+
+1. Implement displaying flags from svg files.
+
 ## License
 
 This project is licensed under the MIT License (https://opensource.org/licenses/MIT)
