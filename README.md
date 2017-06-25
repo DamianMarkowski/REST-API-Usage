@@ -1,10 +1,10 @@
 # REST API Usage
 
-The project demonstrates how to work with REST API in Swift. You will learn how to fetch data from https://restcountries.eu/ public API, after how to map request response result to Swift class, you will be able to display list of the countries and once one of them is selected you will display the details of particular country on the second screen.
+The project demonstrates how to work with REST API in Swift. You will learn how to fetch data from https://restcountries.eu/ public API, after how to map request response result to Swift class, you will be able to display a list of the countries and once one of them is selected you will display the details of particular country on the second screen.
 
-##Getting started
+## Getting started
 
-###Prerequisites
+### Prerequisites
 
 - XCode 8 and Swift 3
 - CocoaPods installed on your Mac (https://cocoapods.org/)
