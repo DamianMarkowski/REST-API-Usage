@@ -6,7 +6,7 @@ The project demonstrates how to work with REST API in Swift. You will learn how 
 
 ### Prerequisites
 
-- XCode 8 and Swift 3
+- Xcode 8 and Swift 3
 - CocoaPods installed on your Mac (https://cocoapods.org/)
 
 ### Installing
