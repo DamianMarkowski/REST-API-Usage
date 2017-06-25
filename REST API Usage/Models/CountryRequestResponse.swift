@@ -12,8 +12,10 @@ import ObjectMapper
 
 class CountryRequestResponse: Mappable {
     var name: String!
+    var capitalCity: String!
     var flagUrl: String!
-    var coordinates: [Double]!
+    var population: Int?
+    var code: String!
     
     required init?(map: Map){
         
@@ -21,7 +23,9 @@ class CountryRequestResponse: Mappable {
     
     func mapping(map: Map) {
         name <- map["name"]
+        capitalCity <- map["capital"]
         flagUrl <- map["flag"]
-        coordinates <- map["latlng"]
+        population <- map["population"]
+        code <- map["alpha3Code"]
     }
 }

@@ -46,7 +46,8 @@ class CountriesListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == showCountryDetailsSegueIdentifier {
-            
+            let vc = segue.destination as! CountryDetailsViewController
+            vc.selectedCountry = selectedCountry
         }
     }
 }

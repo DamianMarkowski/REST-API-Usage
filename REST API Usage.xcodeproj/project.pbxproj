@@ -15,6 +15,7 @@
 		172852791EFFB2C100FDDF0D /* CountryRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172852781EFFB2C100FDDF0D /* CountryRequestResponse.swift */; };
 		1728527C1EFFB3EE00FDDF0D /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728527A1EFFB3EE00FDDF0D /* CountryTableViewCell.swift */; };
 		1728527D1EFFB3EE00FDDF0D /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1728527B1EFFB3EE00FDDF0D /* CountryTableViewCell.xib */; };
+		172852801EFFB80100FDDF0D /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728527F1EFFB80100FDDF0D /* CountryDetailsViewController.swift */; };
 		23767D8CA084B74827BBA1E9 /* Pods_REST_API_Usage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B0B22750E2D7AD0CB2547C /* Pods_REST_API_Usage.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		172852781EFFB2C100FDDF0D /* CountryRequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryRequestResponse.swift; path = Models/CountryRequestResponse.swift; sourceTree = "<group>"; };
 		1728527A1EFFB3EE00FDDF0D /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryTableViewCell.swift; path = Screens/CountriesList/CountryTableViewCell.swift; sourceTree = "<group>"; };
 		1728527B1EFFB3EE00FDDF0D /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountryTableViewCell.xib; path = Screens/CountriesList/CountryTableViewCell.xib; sourceTree = "<group>"; };
+		1728527F1EFFB80100FDDF0D /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryDetailsViewController.swift; path = Screens/CountryDetails/CountryDetailsViewController.swift; sourceTree = "<group>"; };
 		52F8994742146B72D84DC335 /* Pods-REST API Usage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-REST API Usage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-REST API Usage/Pods-REST API Usage.debug.xcconfig"; sourceTree = "<group>"; };
 		9392E59C19F1CF8A418E5D49 /* Pods-REST API Usage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-REST API Usage.release.xcconfig"; path = "Pods/Target Support Files/Pods-REST API Usage/Pods-REST API Usage.release.xcconfig"; sourceTree = "<group>"; };
 		B5B0B22750E2D7AD0CB2547C /* Pods_REST_API_Usage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_REST_API_Usage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				172852731EFFB11D00FDDF0D /* CountriesList */,
+				1728527E1EFFB7C500FDDF0D /* CountryDetails */,
 			);
 			name = Screens;
 			sourceTree = "<group>";
@@ -102,6 +105,14 @@
 				172852781EFFB2C100FDDF0D /* CountryRequestResponse.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		1728527E1EFFB7C500FDDF0D /* CountryDetails */ = {
+			isa = PBXGroup;
+			children = (
+				1728527F1EFFB80100FDDF0D /* CountryDetailsViewController.swift */,
+			);
+			name = CountryDetails;
 			sourceTree = "<group>";
 		};
 		3CEDD9B8919BA71AA7981788 /* Frameworks */ = {
@@ -247,6 +258,7 @@
 			files = (
 				1728527C1EFFB3EE00FDDF0D /* CountryTableViewCell.swift in Sources */,
 				172852761EFFB19200FDDF0D /* CountriesListViewController.swift in Sources */,
+				172852801EFFB80100FDDF0D /* CountryDetailsViewController.swift in Sources */,
 				172852791EFFB2C100FDDF0D /* CountryRequestResponse.swift in Sources */,
 				172852611EFFA94300FDDF0D /* AppDelegate.swift in Sources */,
 			);
