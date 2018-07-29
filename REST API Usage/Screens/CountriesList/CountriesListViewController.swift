@@ -56,12 +56,13 @@ class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
         configureTableView()
         interactor?.fetchCountries()
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let showCountrySegueId = Constants.showCountryDetailsSegueIdentifier.rawValue
         if segue.identifier == showCountrySegueId {
-            let vc = segue.destination as! CountryDetailsViewController
-            vc.selectedCountry = selectedCountry
+            if let viewController = segue.destination as? CountryDetailsViewController {
+                viewController.selectedCountry = selectedCountry
+            }
         }
     }
 
@@ -83,21 +84,23 @@ class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
             self.tableView.reloadData()
         }
     }
-    
+
 }
 
 extension CountriesListViewController: UITableViewDataSource, UITableViewDelegate {
-    
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return countries.count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! CountryTableViewCell
+        let countryCell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier,
+                                                        for: indexPath) as? CountryTableViewCell
+        guard let cell = countryCell else { return UITableViewCell() }
         cell.configure(countries[indexPath.row])
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCountry = countries[indexPath.row]
         router?.navigateToCountryDetailsScreen()
