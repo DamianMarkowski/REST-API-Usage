@@ -2,54 +2,88 @@
 //  CountriesListViewController.swift
 //  REST API Usage
 //
-//  Created by Damian Markowski on 25.06.2017.
-//  Copyright © 2017 Damian Markowski. All rights reserved.
-//
+//  Created by Damian Markowski on 29.07.2018.
+//  Copyright (c) 2018 Damian Markowski. All rights reserved.
 
 import UIKit
-import Alamofire
-import AlamofireObjectMapper
 
-class CountriesListViewController: UIViewController {
-    
+protocol CountriesListDisplayLogic: class {
+    func displayCountries(countries: [CountryRequestResponse])
+}
+
+class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
+
+    var interactor: CountriesListBusinessLogic?
+    var router: (NSObjectProtocol & CountriesListRoutingLogic)?
     @IBOutlet weak var tableView: UITableView!
-    var countries: [CountryRequestResponse]!
+    var countries: [CountryRequestResponse] = []
     var selectedCountry: CountryRequestResponse!
-    let cellXibName = "CountryTableViewCell"
     let cellIdentifier = "Cell"
-    let requestURL = "https://restcountries.eu/rest/v2/all"
-    let showCountryDetailsSegueIdentifier = "showCountryDetails"
-    let screenTitle = "Choose country"
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        title = screenTitle
+    private let cellXibName = "CountryTableViewCell"
+    private let screenTitle = "Choose country"
+
+    // MARK: Object lifecycle
+
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-    
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        setup()
+    }
+
+    // MARK: Setup
+
+    private func setup() {
+        let viewController = self
+        let interactor = CountriesListInteractor()
+        let presenter = CountriesListPresenter()
+        let router = CountriesListRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+    }
+
+    // MARK: View lifecycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        countries = []
+        setScreenTitle()
         configureTableView()
-        fetchCountries()
-    }
-    
-    fileprivate func configureTableView(){
-        tableView.register(UINib(nibName: cellXibName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
-    }
-    
-    fileprivate func fetchCountries() {
-        Alamofire.request(requestURL).responseArray { (response: DataResponse<[CountryRequestResponse]>) in
-            self.countries = response.result.value
-            self.tableView.reloadData()
-        }
+        interactor?.fetchCountries()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == showCountryDetailsSegueIdentifier {
+        let showCountrySegueId = Constants.showCountryDetailsSegueIdentifier.rawValue
+        if segue.identifier == showCountrySegueId {
             let vc = segue.destination as! CountryDetailsViewController
             vc.selectedCountry = selectedCountry
         }
     }
+
+    // MARK: Private methods
+
+    private func setScreenTitle() {
+        title = screenTitle
+    }
+
+    private func configureTableView() {
+        tableView.register(UINib(nibName: cellXibName, bundle: nil), forCellReuseIdentifier: cellIdentifier)
+    }
+
+    // MARK: Public methods
+
+    func displayCountries(countries: [CountryRequestResponse]) {
+        self.countries = countries
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
+    
 }
 
 extension CountriesListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -66,6 +100,6 @@ extension CountriesListViewController: UITableViewDataSource, UITableViewDelegat
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedCountry = countries[indexPath.row]
-        performSegue(withIdentifier: showCountryDetailsSegueIdentifier, sender: self)
+        router?.navigateToCountryDetailsScreen()
     }
 }

@@ -20,13 +20,13 @@ class CountryDetailsViewController: UIViewController {
         super.viewWillAppear(animated)
         title = screenTitle
     }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         populateData()
     }
-    
-    fileprivate func populateData(){
+
+    fileprivate func populateData() {
         nameLabel.text = selectedCountry.name
         capitalLabel.text = selectedCountry.capitalCity
         if let population = selectedCountry.population {

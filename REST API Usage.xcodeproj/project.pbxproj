@@ -11,11 +11,15 @@
 		172852661EFFA94300FDDF0D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172852641EFFA94300FDDF0D /* Main.storyboard */; };
 		172852681EFFA94300FDDF0D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 172852671EFFA94300FDDF0D /* Assets.xcassets */; };
 		1728526B1EFFA94300FDDF0D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 172852691EFFA94300FDDF0D /* LaunchScreen.storyboard */; };
-		172852761EFFB19200FDDF0D /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172852751EFFB19200FDDF0D /* CountriesListViewController.swift */; };
-		172852791EFFB2C100FDDF0D /* CountryRequestResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172852781EFFB2C100FDDF0D /* CountryRequestResponse.swift */; };
 		1728527C1EFFB3EE00FDDF0D /* CountryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728527A1EFFB3EE00FDDF0D /* CountryTableViewCell.swift */; };
 		1728527D1EFFB3EE00FDDF0D /* CountryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1728527B1EFFB3EE00FDDF0D /* CountryTableViewCell.xib */; };
 		172852801EFFB80100FDDF0D /* CountryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1728527F1EFFB80100FDDF0D /* CountryDetailsViewController.swift */; };
+		1746EF11210DB7E2004C0661 /* CountriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746EF0C210DB7E2004C0661 /* CountriesListPresenter.swift */; };
+		1746EF12210DB7E2004C0661 /* CountriesListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746EF0D210DB7E2004C0661 /* CountriesListRouter.swift */; };
+		1746EF13210DB7E2004C0661 /* CountriesListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746EF0E210DB7E2004C0661 /* CountriesListModels.swift */; };
+		1746EF14210DB7E2004C0661 /* CountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746EF0F210DB7E2004C0661 /* CountriesListViewController.swift */; };
+		1746EF15210DB7E2004C0661 /* CountriesListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746EF10210DB7E2004C0661 /* CountriesListInteractor.swift */; };
+		1746EF19210DD0B5004C0661 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1746EF18210DD0B4004C0661 /* Constants.swift */; };
 		23767D8CA084B74827BBA1E9 /* Pods_REST_API_Usage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5B0B22750E2D7AD0CB2547C /* Pods_REST_API_Usage.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,11 +30,15 @@
 		172852671EFFA94300FDDF0D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1728526A1EFFA94300FDDF0D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1728526C1EFFA94300FDDF0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		172852751EFFB19200FDDF0D /* CountriesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountriesListViewController.swift; path = Screens/CountriesList/CountriesListViewController.swift; sourceTree = "<group>"; };
-		172852781EFFB2C100FDDF0D /* CountryRequestResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryRequestResponse.swift; path = Models/CountryRequestResponse.swift; sourceTree = "<group>"; };
 		1728527A1EFFB3EE00FDDF0D /* CountryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryTableViewCell.swift; path = Screens/CountriesList/CountryTableViewCell.swift; sourceTree = "<group>"; };
 		1728527B1EFFB3EE00FDDF0D /* CountryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = CountryTableViewCell.xib; path = Screens/CountriesList/CountryTableViewCell.xib; sourceTree = "<group>"; };
 		1728527F1EFFB80100FDDF0D /* CountryDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CountryDetailsViewController.swift; path = Screens/CountryDetails/CountryDetailsViewController.swift; sourceTree = "<group>"; };
+		1746EF0C210DB7E2004C0661 /* CountriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountriesListPresenter.swift; path = Screens/CountriesList/CountriesListPresenter.swift; sourceTree = "<group>"; };
+		1746EF0D210DB7E2004C0661 /* CountriesListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountriesListRouter.swift; path = Screens/CountriesList/CountriesListRouter.swift; sourceTree = "<group>"; };
+		1746EF0E210DB7E2004C0661 /* CountriesListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountriesListModels.swift; path = Screens/CountriesList/CountriesListModels.swift; sourceTree = "<group>"; };
+		1746EF0F210DB7E2004C0661 /* CountriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountriesListViewController.swift; path = Screens/CountriesList/CountriesListViewController.swift; sourceTree = "<group>"; };
+		1746EF10210DB7E2004C0661 /* CountriesListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CountriesListInteractor.swift; path = Screens/CountriesList/CountriesListInteractor.swift; sourceTree = "<group>"; };
+		1746EF18210DD0B4004C0661 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = Screens/CountriesList/Constants.swift; sourceTree = "<group>"; };
 		52F8994742146B72D84DC335 /* Pods-REST API Usage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-REST API Usage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-REST API Usage/Pods-REST API Usage.debug.xcconfig"; sourceTree = "<group>"; };
 		9392E59C19F1CF8A418E5D49 /* Pods-REST API Usage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-REST API Usage.release.xcconfig"; path = "Pods/Target Support Files/Pods-REST API Usage/Pods-REST API Usage.release.xcconfig"; sourceTree = "<group>"; };
 		B5B0B22750E2D7AD0CB2547C /* Pods_REST_API_Usage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_REST_API_Usage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,13 +77,8 @@
 		1728525F1EFFA94300FDDF0D /* REST API Usage */ = {
 			isa = PBXGroup;
 			children = (
-				172852771EFFB2A800FDDF0D /* Models */,
+				1746EF17210DCD9D004C0661 /* Application */,
 				172852721EFFB11300FDDF0D /* Screens */,
-				172852601EFFA94300FDDF0D /* AppDelegate.swift */,
-				172852641EFFA94300FDDF0D /* Main.storyboard */,
-				172852671EFFA94300FDDF0D /* Assets.xcassets */,
-				172852691EFFA94300FDDF0D /* LaunchScreen.storyboard */,
-				1728526C1EFFA94300FDDF0D /* Info.plist */,
 			);
 			path = "REST API Usage";
 			sourceTree = "<group>";
@@ -92,19 +95,15 @@
 		172852731EFFB11D00FDDF0D /* CountriesList */ = {
 			isa = PBXGroup;
 			children = (
-				172852751EFFB19200FDDF0D /* CountriesListViewController.swift */,
-				1728527A1EFFB3EE00FDDF0D /* CountryTableViewCell.swift */,
-				1728527B1EFFB3EE00FDDF0D /* CountryTableViewCell.xib */,
+				1746EF16210DB7E7004C0661 /* ViewComponents */,
+				1746EF0C210DB7E2004C0661 /* CountriesListPresenter.swift */,
+				1746EF0D210DB7E2004C0661 /* CountriesListRouter.swift */,
+				1746EF0E210DB7E2004C0661 /* CountriesListModels.swift */,
+				1746EF0F210DB7E2004C0661 /* CountriesListViewController.swift */,
+				1746EF10210DB7E2004C0661 /* CountriesListInteractor.swift */,
+				1746EF18210DD0B4004C0661 /* Constants.swift */,
 			);
 			name = CountriesList;
-			sourceTree = "<group>";
-		};
-		172852771EFFB2A800FDDF0D /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				172852781EFFB2C100FDDF0D /* CountryRequestResponse.swift */,
-			);
-			name = Models;
 			sourceTree = "<group>";
 		};
 		1728527E1EFFB7C500FDDF0D /* CountryDetails */ = {
@@ -113,6 +112,27 @@
 				1728527F1EFFB80100FDDF0D /* CountryDetailsViewController.swift */,
 			);
 			name = CountryDetails;
+			sourceTree = "<group>";
+		};
+		1746EF16210DB7E7004C0661 /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				1728527A1EFFB3EE00FDDF0D /* CountryTableViewCell.swift */,
+				1728527B1EFFB3EE00FDDF0D /* CountryTableViewCell.xib */,
+			);
+			name = ViewComponents;
+			sourceTree = "<group>";
+		};
+		1746EF17210DCD9D004C0661 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				172852601EFFA94300FDDF0D /* AppDelegate.swift */,
+				172852641EFFA94300FDDF0D /* Main.storyboard */,
+				172852671EFFA94300FDDF0D /* Assets.xcassets */,
+				172852691EFFA94300FDDF0D /* LaunchScreen.storyboard */,
+				1728526C1EFFA94300FDDF0D /* Info.plist */,
+			);
+			name = Application;
 			sourceTree = "<group>";
 		};
 		3CEDD9B8919BA71AA7981788 /* Frameworks */ = {
@@ -257,10 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				1728527C1EFFB3EE00FDDF0D /* CountryTableViewCell.swift in Sources */,
-				172852761EFFB19200FDDF0D /* CountriesListViewController.swift in Sources */,
+				1746EF14210DB7E2004C0661 /* CountriesListViewController.swift in Sources */,
 				172852801EFFB80100FDDF0D /* CountryDetailsViewController.swift in Sources */,
-				172852791EFFB2C100FDDF0D /* CountryRequestResponse.swift in Sources */,
+				1746EF11210DB7E2004C0661 /* CountriesListPresenter.swift in Sources */,
+				1746EF13210DB7E2004C0661 /* CountriesListModels.swift in Sources */,
+				1746EF15210DB7E2004C0661 /* CountriesListInteractor.swift in Sources */,
 				172852611EFFA94300FDDF0D /* AppDelegate.swift in Sources */,
+				1746EF12210DB7E2004C0661 /* CountriesListRouter.swift in Sources */,
+				1746EF19210DD0B5004C0661 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

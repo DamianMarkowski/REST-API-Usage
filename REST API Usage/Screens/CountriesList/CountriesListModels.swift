@@ -1,13 +1,11 @@
 //
-//  CountryRequestResponse.swift
+//  CountriesListModels.swift
 //  REST API Usage
 //
-//  Created by Damian Markowski on 25.06.2017.
-//  Copyright © 2017 Damian Markowski. All rights reserved.
-//
+//  Created by Damian Markowski on 29.07.2018.
+//  Copyright (c) 2018 Damian Markowski. All rights reserved.
 
-import Foundation
-
+import UIKit
 import ObjectMapper
 
 class CountryRequestResponse: Mappable {
@@ -16,11 +14,11 @@ class CountryRequestResponse: Mappable {
     var flagUrl: String!
     var population: Int?
     var code: String!
-    
-    required init?(map: Map){
-        
+
+    required init?(map: Map) {
+
     }
-    
+
     func mapping(map: Map) {
         name <- map["name"]
         capitalCity <- map["capital"]
