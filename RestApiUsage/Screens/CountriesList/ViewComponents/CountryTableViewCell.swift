@@ -11,7 +11,6 @@ import UIKit
 class CountryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countryNameLabel: UILabel!
-    @IBOutlet weak var flagWebView: UIWebView!
     var requestResponse: CountryRequestResponse!
 
     override func awakeFromNib() {
@@ -26,8 +25,6 @@ class CountryTableViewCell: UITableViewCell {
 
     fileprivate func populateData() {
         countryNameLabel.text = requestResponse.name
-        // TBD: populating web view with svg flag image 
-        //let request = URLRequest.init(url: URL(fileURLWithPath: requestResponse.flagUrl))
-        //flagWebView.loadRequest(request)
+        // TBD: populating UIImage with svg flag image 
     }
 }

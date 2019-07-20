@@ -1,6 +1,0 @@
-framework module Pods_REST_API_Usage {
-  umbrella header "Pods-REST API Usage-umbrella.h"
-
-  export *
-  module * { export * }
-}

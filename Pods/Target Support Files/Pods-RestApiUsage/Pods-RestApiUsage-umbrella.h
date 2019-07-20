@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_REST_API_UsageVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_REST_API_UsageVersionString[];
+FOUNDATION_EXPORT double Pods_RestApiUsageVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_RestApiUsageVersionString[];
 
