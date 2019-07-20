@@ -26,6 +26,8 @@
 		7A21C16422E3816D00F666F9 /* CountriesFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21C16322E3816D00F666F9 /* CountriesFetcher.swift */; };
 		7A21C16622E39DB700F666F9 /* MockCountriesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21C16522E39DB700F666F9 /* MockCountriesListPresenter.swift */; };
 		7A21C16922E3AAE500F666F9 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21C16822E3AAE500F666F9 /* Country.swift */; };
+		7A21C16B22E3AFE800F666F9 /* CountriesListPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21C16A22E3AFE800F666F9 /* CountriesListPresenterTests.swift */; };
+		7A21C16D22E3B2A400F666F9 /* MockCountriesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A21C16C22E3B2A400F666F9 /* MockCountriesListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		7A21C16322E3816D00F666F9 /* CountriesFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesFetcher.swift; sourceTree = "<group>"; };
 		7A21C16522E39DB700F666F9 /* MockCountriesListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountriesListPresenter.swift; sourceTree = "<group>"; };
 		7A21C16822E3AAE500F666F9 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		7A21C16A22E3AFE800F666F9 /* CountriesListPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesListPresenterTests.swift; sourceTree = "<group>"; };
+		7A21C16C22E3B2A400F666F9 /* MockCountriesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCountriesListViewController.swift; sourceTree = "<group>"; };
 		8A18E8B0C5D1B8FC68A0A229 /* Pods-RestApiUsage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestApiUsage.release.xcconfig"; path = "Target Support Files/Pods-RestApiUsage/Pods-RestApiUsage.release.xcconfig"; sourceTree = "<group>"; };
 		930D4A35063D367463100051 /* Pods-RestApiUsage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestApiUsage.debug.xcconfig"; path = "Target Support Files/Pods-RestApiUsage/Pods-RestApiUsage.debug.xcconfig"; sourceTree = "<group>"; };
 		A76F4F15A6B6CCDE38B96104 /* Pods_RestApiUsage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestApiUsage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -198,6 +202,7 @@
 			children = (
 				7A21C16022E3811400F666F9 /* Mocks */,
 				7A21C15E22E37A5F00F666F9 /* CountriesListInteractorTests.swift */,
+				7A21C16A22E3AFE800F666F9 /* CountriesListPresenterTests.swift */,
 			);
 			path = CountriesList;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 			children = (
 				7A21C16122E3812600F666F9 /* MockCountriesFetcher.swift */,
 				7A21C16522E39DB700F666F9 /* MockCountriesListPresenter.swift */,
+				7A21C16C22E3B2A400F666F9 /* MockCountriesListViewController.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -394,6 +400,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A21C16222E3812600F666F9 /* MockCountriesFetcher.swift in Sources */,
+				7A21C16B22E3AFE800F666F9 /* CountriesListPresenterTests.swift in Sources */,
+				7A21C16D22E3B2A400F666F9 /* MockCountriesListViewController.swift in Sources */,
 				7A21C15F22E37A5F00F666F9 /* CountriesListInteractorTests.swift in Sources */,
 				7A21C16622E39DB700F666F9 /* MockCountriesListPresenter.swift in Sources */,
 			);

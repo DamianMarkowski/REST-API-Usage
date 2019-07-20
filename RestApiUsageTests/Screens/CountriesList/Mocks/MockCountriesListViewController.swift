@@ -1,5 +1,5 @@
 //
-//  MockCountriesListPresenter.swift
+//  MockCountriesListViewController.swift
 //  RestApiUsageTests
 //
 //  Created by Damian Markowski on 20/07/2019.
@@ -9,14 +9,15 @@
 import Foundation
 @testable import RestApiUsage
 
-class MockCountriesListPresenter: CountriesListPresentationLogic {
+class MockCountriesListViewController: CountriesListDisplayLogic {
     
-    var passCountriesCalled = false
+    var displayCountriesCalled = false
     var spyCountries: [Country]?
     
-    func passCountries(countries: [Country]) {
-        passCountriesCalled = true
+    func displayCountries(countries: [Country]) {
+        displayCountriesCalled = true
         spyCountries = countries
     }
+    
     
 }

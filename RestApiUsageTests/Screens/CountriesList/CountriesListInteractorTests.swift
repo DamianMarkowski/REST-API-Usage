@@ -36,10 +36,12 @@ class CountriesListInteractorTests: XCTestCase {
         XCTAssert(mockedCountriesFetcher.fetchCountriesCalled)
     }
     
-    func test_fetchCountries_shouldCallPassCountriesFromPresenter_whenAtLeastOneCountryFound() {
-        mockedCountriesFetcher.stubCountries = [Country(name: "", capitalCity: "", flagUrl: "", population: nil, code: "")]
+    func test_fetchCountries_shouldCallPassCountriesFromPresenterWithCorrectParameter_whenAtLeastOneCountryFound() {
+        let countries = [Country(name: "", capitalCity: "", flagUrl: "", population: nil, code: "")]
+        mockedCountriesFetcher.stubCountries = countries
         sut.fetchCountries()
         XCTAssert(mockedPresenter.passCountriesCalled)
+        XCTAssertEqual(mockedPresenter.spyCountries, countries)
     }
     
     func test_fetchCountries_shouldNotCallPassCountriesFromPresenter_whenNoCountriesFound() {

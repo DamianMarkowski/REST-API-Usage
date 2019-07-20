@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Country {
+struct Country: Equatable {
     let name: String
     let capitalCity: String
     let flagUrl: String
