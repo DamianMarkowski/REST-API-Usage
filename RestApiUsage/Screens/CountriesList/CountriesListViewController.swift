@@ -14,11 +14,11 @@ protocol CountriesListDisplayLogic: class {
 class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
 
     var interactor: CountriesListBusinessLogic?
-    var router: (NSObjectProtocol & CountriesListRoutingLogic)?
+    var router: CountriesListRoutingLogic?
     @IBOutlet weak var tableView: UITableView!
-    var countries: [Country] = []
-    var selectedCountry: Country!
     let cellIdentifier = "Cell"
+    private var selectedCountry: Country!
+    private var countries: [Country] = []
     private let cellXibName = "CountryTableViewCell"
     private let screenTitle = "Choose country"
 

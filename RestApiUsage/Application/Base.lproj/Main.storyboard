@@ -13,7 +13,7 @@
         <!--Countries List View Controller-->
         <scene sceneID="Gs9-pv-Wss">
             <objects>
-                <viewController id="1oJ-JA-gc9" customClass="CountriesListViewController" customModule="RESTAPIUsage" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CountriesList" id="1oJ-JA-gc9" customClass="CountriesListViewController" customModule="RESTAPIUsage" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="a0G-LJ-GKb"/>
                         <viewControllerLayoutGuide type="bottom" id="ynp-Ag-Kgl"/>
