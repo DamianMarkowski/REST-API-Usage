@@ -11,14 +11,14 @@ import UIKit
 class CountryTableViewCell: UITableViewCell {
 
     @IBOutlet weak var countryNameLabel: UILabel!
-    var requestResponse: CountryRequestResponse!
+    var requestResponse: Country!
 
     override func awakeFromNib() {
         super.awakeFromNib()
         self.selectionStyle = .none
     }
 
-    func configure(_ data: CountryRequestResponse) {
+    func configure(_ data: Country) {
         requestResponse = data
         populateData()
     }

@@ -14,7 +14,7 @@ class CountryDetailsViewController: UIViewController {
     @IBOutlet weak var populationLabel: UILabel!
     @IBOutlet weak var codeLabel: UILabel!
     let screenTitle = "Country details"
-    var selectedCountry: CountryRequestResponse!
+    var selectedCountry: Country!
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

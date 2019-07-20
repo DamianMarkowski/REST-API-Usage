@@ -8,7 +8,7 @@
 import UIKit
 
 protocol CountriesListDisplayLogic: class {
-    func displayCountries(countries: [CountryRequestResponse])
+    func displayCountries(countries: [Country])
 }
 
 class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
@@ -16,8 +16,8 @@ class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
     var interactor: CountriesListBusinessLogic?
     var router: (NSObjectProtocol & CountriesListRoutingLogic)?
     @IBOutlet weak var tableView: UITableView!
-    var countries: [CountryRequestResponse] = []
-    var selectedCountry: CountryRequestResponse!
+    var countries: [Country] = []
+    var selectedCountry: Country!
     let cellIdentifier = "Cell"
     private let cellXibName = "CountryTableViewCell"
     private let screenTitle = "Choose country"
@@ -44,6 +44,7 @@ class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
+        interactor.countriesFetcher = CountriesFetcher()
         presenter.viewController = viewController
         router.viewController = viewController
     }
@@ -78,7 +79,7 @@ class CountriesListViewController: UIViewController, CountriesListDisplayLogic {
 
     // MARK: Public methods
 
-    func displayCountries(countries: [CountryRequestResponse]) {
+    func displayCountries(countries: [Country]) {
         self.countries = countries
         DispatchQueue.main.async {
             self.tableView.reloadData()

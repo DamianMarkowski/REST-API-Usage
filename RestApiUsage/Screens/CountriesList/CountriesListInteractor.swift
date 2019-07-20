@@ -15,13 +15,13 @@ protocol CountriesListBusinessLogic {
 class CountriesListInteractor: CountriesListBusinessLogic {
 
     var presenter: CountriesListPresentationLogic?
-    private let requestURL = "https://restcountries.eu/rest/v2/all"
+    var countriesFetcher: CountriesFetcherType?
 
     func fetchCountries() {
-        Alamofire.request(requestURL).responseArray {[weak self] (response: DataResponse<[CountryRequestResponse]>) in
-            if let countries = response.result.value {
+        countriesFetcher?.fetchCountries(completion: { [weak self] countries in
+            if let countries = countries {
                 self?.presenter?.passCountries(countries: countries)
             }
-        }
+        })
     }
 }

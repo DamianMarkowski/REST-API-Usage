@@ -8,14 +8,14 @@
 import UIKit
 
 protocol CountriesListPresentationLogic {
-    func passCountries(countries: [CountryRequestResponse])
+    func passCountries(countries: [Country])
 }
 
 class CountriesListPresenter: CountriesListPresentationLogic {
 
     weak var viewController: CountriesListDisplayLogic?
 
-    func passCountries(countries: [CountryRequestResponse]) {
+    func passCountries(countries: [Country]) {
         viewController?.displayCountries(countries: countries)
     }
 }
