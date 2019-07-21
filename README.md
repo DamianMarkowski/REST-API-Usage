@@ -23,6 +23,7 @@ Once installation process finished just double click REST API Usage.xcworkspace 
 ## TO DO
 
 1. Implement displaying flags from svg files.
+2. Add snapshot tests.
 
 ## License
 
