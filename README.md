@@ -18,7 +18,7 @@ Before you run the project, navigate to directory including Podfile and run the 
 pod install
 ```
 
-Once installation process finished just double click REST API Usage.xcworkspace file.
+Once installation process finished just double click RestApiUsage.xcworkspace file.
 
 ## TO DO
 
